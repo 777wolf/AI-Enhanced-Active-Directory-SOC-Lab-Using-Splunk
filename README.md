@@ -1,10 +1,3 @@
-# AI-Enhanced-Active-Directory-SOC-Lab-Using-Splunk
-Good. Below is your project converted into a clean, structured GitHub README format suitable for a public repository.
-
-You can paste this directly into:
-
-README.md
-
 **AI-Enhanced Active Directory SOC Lab Using Splunk**
 📌 Project Overview
 This project demonstrates the design and implementation of a Security Operations Center (SOC) lab to monitor Active Directory authentication events using Splunk Enterprise.
@@ -101,6 +94,7 @@ Event ID	Description
 4738	Account modified
 
 **Detection Engineering**
+
 1️⃣ **Brute Force Detection**
 index=main host=DC01 (EventCode=4625 OR EventCode=4624)
 | bin _time span=5m
