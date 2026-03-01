@@ -1,7 +1,0 @@
-index=main host=DC01 EventCode=4624 earliest=-24h
-| bin _time span=15m
-| stats count as login_count by _time Account_Name
-| eventstats avg(login_count) as avg_login stdev(login_count) as stdev_login by Account_Name
-| eval upper_bound = avg_login + (2*stdev_login)
-| where login_count > upper_bound
-| table _time Account_Name login_count upper_bound
