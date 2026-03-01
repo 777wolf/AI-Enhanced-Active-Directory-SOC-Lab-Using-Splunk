@@ -1,4 +1,0 @@
-index=main host=DC01 EventCode=4624 Logon_Type=3
-| where like(Account_Name,"%admin%")
-| where Source_Network_Address!="127.0.0.1"
-| table _time Account_Name Source_Network_Address

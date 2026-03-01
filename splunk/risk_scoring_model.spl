@@ -1,7 +1,0 @@
-index=main host=DC01 (EventCode=4625 OR EventCode=4624)
-| stats 
-    count(eval(EventCode=4625)) as failed,
-    count(eval(EventCode=4624)) as success
-    by Source_Network_Address
-| eval risk_score = (failed*2) + success
-| sort - risk_score

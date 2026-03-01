@@ -1,2 +1,0 @@
-index=main host=DC01 EventCode=4728
-| where Group_Name IN ("Domain Admins","Enterprise Admins","Administrators")
